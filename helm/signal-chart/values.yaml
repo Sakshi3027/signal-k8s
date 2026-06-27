@@ -1,0 +1,31 @@
+api:
+  image: signal-api:latest
+  replicas: 2
+  port: 8000
+  resources:
+    requests:
+      cpu: "250m"
+      memory: "256Mi"
+    limits:
+      cpu: "500m"
+      memory: "512Mi"
+  hpa:
+    minReplicas: 2
+    maxReplicas: 10
+    cpuUtilization: 70
+
+postgres:
+  image: postgres:16-alpine
+  storage: 10Gi
+  database: signal
+
+qdrant:
+  image: qdrant/qdrant:latest
+  storage: 10Gi
+
+ingress:
+  enabled: true
+  host: signal.yourdomain.com
+  tls: true
+
+environment: production

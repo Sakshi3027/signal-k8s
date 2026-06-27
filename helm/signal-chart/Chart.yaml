@@ -1,0 +1,14 @@
+apiVersion: v2
+name: signal-chart
+description: Helm chart for Signal Market Intelligence Platform on GKE
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+keywords:
+  - signal
+  - market-intelligence
+  - langchain
+  - qdrant
+maintainers:
+  - name: Sakshi Chavan
+    email: sakshchavan30@gmail.com

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: signal-config
+data:
+  QDRANT_URL: "http://qdrant-service:6333"
+  POSTGRES_DB: "signal"
+  LOG_LEVEL: "info"
+  ENVIRONMENT: "production"
